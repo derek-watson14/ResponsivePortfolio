@@ -17,8 +17,7 @@ https://derek-watson14.github.io/ResponsivePortfolio/index.html
 
 #### Screenshots:
 
-![About full screen](/Screenshots/about-full.png "About page full screen")
-
-![Contact mobile](/Screenshots/contact-mobile.png "Contact page mobile")
-
-![Portfolio medium width](/Screenshots/portfolio-medium.png "Portfolio page medium width")
+<img src="screenshots/about-full.png" alt="" style="height: 300px;"/>
+<br>
+<img src="screenshots/contact-mobile.png" alt="" style="height: 300px; margin-right: 30px;"/>
+<img src="screenshots/portfolio-medium.png" alt="" style="height: 300px;"/>
