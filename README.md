@@ -15,6 +15,6 @@ am happy with how it turned out.
 
 https://derek-watson14.github.io/ResponsivePortfolio/index.html
 
-#### Screenshots:
+#### Screenshot:
 
 <img src="about-full.png" alt="About" height="400"/>
