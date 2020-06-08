@@ -77,6 +77,7 @@ a {
   .card-custom {
     margin-left: 0 !important;
     margin-right: 0 !important;
+    padding: 24px !important;
     width: 100% !important;
   }
   .container-fluid {
