@@ -1,20 +1,24 @@
 ## Responsive Portfolio
 
-This repository hosts my attempt at the third homework assignment of the UW Coding Bootcamp -
-using Bootstrap to create a "portfolio site" to certain specifications given to us. I had a lot
-of fun learning Bootstrap and can tell once I have it down it will be very easy to quickly create
-nice and consistent looking websites.
+This repository hosts my attempt at the third homework assignment of the UW Coding Boot Camp -
+using Bootstrap to create a responsive "portfolio" site. I had a lot of fun learning Bootstrap and can
+tell once I have it down it will be very easy to quickly create nice and consistent looking websites.
 
 I wanted to use custom colors on my site, and decided to employ CSS variables to make them consistent
 across pages and easy to manage (only change in one place).
 
-One project requiremnt I had trouble with was minimizing media queries. To achieve the design I
-wanted I found myself reaching for them to adjust the margin and padding in both the navbar and around
-the cards on the pages as the screen is resized.
-
-Additionally I am not certian if I used grid properly or not, perhaps that would have helped to solve my
-first problem.
+It took quite a bit of effort to get it to look exactly how I wanted it. I was unable to entirely
+eliminate media queries, and am unsure if my implementation of Bootstrap grid is perfect, but overall I
+am happy with how it turned out.
 
 #### View here:
 
 https://derek-watson14.github.io/ResponsivePortfolio/index.html
+
+#### Screenshots:
+
+![About full screen](/Screenshots/about-full.png "About page full screen")
+
+![Contact mobile](/Screenshots/contact-mobile.png "Contact page mobile")
+
+![Portfolio medium width](/Screenshots/portfolio-medium.png "Portfolio page medium width")
