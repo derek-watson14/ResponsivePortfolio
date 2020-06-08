@@ -17,6 +17,4 @@ https://derek-watson14.github.io/ResponsivePortfolio/index.html
 
 #### Screenshots:
 
-<img src="screenshots/about-full.png" alt="About" height="300"/>
-<br>
-<img src="screenshots/contact-mobile.png" alt="Contact" height="400"/>  <img src="screenshots/portfolio-medium.png" alt="Portfolio" height="400"/>
+<img src="about-full.png" alt="About" height="400"/>
