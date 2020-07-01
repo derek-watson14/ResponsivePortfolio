@@ -59,7 +59,12 @@
             <div class="container-fluid p-0">
               <div class="row">
                 <div class="col-sm-6">
-                  <div class="img-container mb-5 position-relative opacity-4" data-toggle="modal" data-target="#drinkME-modal">
+                  <div
+                    class="img-container mb-5 position-relative opacity-4"
+                    data-toggle="modal"
+                    data-target="#project-modal"
+                    data-project="drinkME"
+                  >
                     <img
                       class="img-fluid portfolio-img rounded"
                       src="./project-imgs/dm1.png"
@@ -73,7 +78,12 @@
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="img-container mb-5 position-relative opacity-4">
+                  <div
+                    class="img-container mb-5 position-relative opacity-4"
+                    data-toggle="modal"
+                    data-target="#project-modal"
+                    data-project="derDieDas"
+                  >
                     <img
                       class="img-fluid portfolio-img rounded"
                       src="./project-imgs/ddd2.png"
@@ -89,7 +99,12 @@
               </div>
               <div class="row">
                 <div class="col-sm-6">
-                  <div class="img-container mb-5 position-relative opacity-4">
+                  <div
+                    class="img-container mb-5 position-relative opacity-4"
+                    data-toggle="modal"
+                    data-target="#project-modal"
+                    data-project="hachiKuchi"
+                  >
                     <img
                       class="img-fluid portfolio-img rounded"
                       src="./project-imgs/hk2.png"
@@ -103,7 +118,12 @@
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="img-container mb-5 position-relative opacity-4">
+                  <div
+                    class="img-container mb-5 position-relative opacity-4"
+                    data-toggle="modal"
+                    data-target="#project-modal"
+                    data-project="cs50Homepage"
+                  >
                     <img
                       class="img-fluid portfolio-img rounded"
                       src="./project-imgs/hp2.png"
@@ -117,30 +137,37 @@
                   </div>
                 </div>
               </div>
+            </div>
           </section>
         </div>
       </div>
     </div>
 
-    <!-- ! Modals -->
-    <!-- drinkME -->
+    <!-- ! Modal -->
     <div
       class="modal fade"
-      id="drinkME-modal"
+      id="project-modal"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="projectModal"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-lg">
         <div class="modal-content bg-dark">
           <div class="modal-header">
-            <h4 class="modal-title text-peachy font-header" id="exampleModalLabel">drinkME</h4>
-            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <h4 class="modal-title text-peachy font-header" id="projectModal">
+              drinkME
+            </h4>
+            <button
+              type="button"
+              class="close text-white"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body p-0 ">
+          <div class="modal-body p-0">
             <div
               id="carouselExampleIndicators"
               class="carousel slide"
@@ -163,27 +190,6 @@
               </ol>
               <div id="modal-img-container" class="carousel-inner">
                 <!-- ! IMAGES HERE ! -->
-                <div class="carousel-item active">
-                  <img
-                    src="./project-imgs/dm1.png"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./project-imgs/dm2.png"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./project-imgs/dm3.png"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
               </div>
               <a
                 class="carousel-control-prev"
@@ -212,13 +218,29 @@
             </div>
             <div class="modal-text text-paper font-text p-3">
               <h6 class="font-header">About</h6>
-              <p id="modal-description">This was a group project for the UW Coding Bootcamp.</p>
-              <button class="btn btn-ocean"><a href="https://derek-watson14.github.io/drinkME/" target="_blank">Website</a></button>
-              <button class="btn btn-ocean"><a href="https://github.com/derek-watson14/drinkME" target="_blank">Codebase</a></button>
+              <p id="modal-description"></p>
+              <button class="btn btn-ocean">
+                <a
+                  id="modal-deployment"
+                  href="https://derek-watson14.github.io/drinkME/"
+                  target="_blank"
+                  >Website</a
+                >
+              </button>
+              <button class="btn btn-ocean">
+                <a
+                  id="modal-codebase"
+                  href="https://github.com/derek-watson14/drinkME"
+                  target="_blank"
+                  >Codebase</a
+                >
+              </button>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-peachy" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-peachy" data-dismiss="modal">
+              Close
+            </button>
           </div>
         </div>
       </div>
