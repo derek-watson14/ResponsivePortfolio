@@ -1,31 +1,4 @@
-{
-  /* 
-  <div class="carousel-item active">
-    <img
-      src="./project-imgs/dm1.png"
-      class="d-block w-100"
-      alt="..."
-    />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="./project-imgs/dm2.png"
-      class="d-block w-100"
-      alt="..."
-    />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="./project-imgs/dm3.png"
-      class="d-block w-100"
-      alt="..."
-    />
-  </div> 
-*/
-}
-
 // * Modal
-
 const projects = {
   drinkME: {
     title: "drinkME",
