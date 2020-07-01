@@ -225,15 +225,9 @@ em {
 }
 
 /* * Modals */
-.modal {
-  padding: 0px !important;
-  width: 100vw;
-}
-.modal-backdrop {
-  width: 100vw;
-}
+body.modal-open,
 .modal-open {
-  width: 100vw;
+  padding: 0px;
 }
 .modal-lg {
   max-width: 80%;
@@ -287,5 +281,8 @@ em {
   }
   .modal-lg {
     max-width: 100%;
+  }
+  .modal-dialog {
+    margin: 25% 0 0 0 !important;
   }
 }
