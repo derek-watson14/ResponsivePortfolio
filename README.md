@@ -11,10 +11,28 @@ It took quite a bit of effort to get it to look exactly how I wanted it. I was u
 eliminate media queries, and am unsure if my implementation of Bootstrap grid is perfect, but overall I
 am happy with how it turned out.
 
-#### View here:
+### View here:
 
 https://derek-watson14.github.io/ResponsivePortfolio/index.html
 
-#### Screenshot:
+### Screenshots:
 
-<img src="about-full.png" alt="About" height="400"/>
+#### Home
+
+![Home](./readme-imgs/rp-home.png)
+
+#### Live commits histogram and footer
+
+![Commits histogram](./readme-imgs/rp-commits.png)
+
+#### Portfolio page with animated header
+
+![Portfolio page with animated header](./readme-imgs/rp-portfolio.png)
+
+#### Project modal
+
+![Project modal](./readme-imgs/rp-modal.png)
+
+#### Contact page
+
+![Contact page](./readme-imgs/rp-contact.png)
