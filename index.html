@@ -92,31 +92,31 @@
                 id="carouselExampleIndicators"
                 class="carousel slide"
                 data-ride="carousel"
+                data-interval="10000"
               >
-                <ol class="carousel-indicators">
-                  <li
-                    data-target="#carouselExampleIndicators"
-                    data-slide-to="0"
-                    class="active"
-                  ></li>
-                  <li
-                    data-target="#carouselExampleIndicators"
-                    data-slide-to="1"
-                  ></li>
-                </ol>
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
+                  <div class="carousel-item active position-relative">
                     <h5 class="text-paper">Git Commit History</h5>
-                    <p class="text-paper">GitHub commits by month.</p>
-                    <p>Made with GitHub API and Charts.js</p>
+                    <p class="text-paper mb-1">GitHub commits by month.</p>
+                    <p class="text-paper smaller">
+                      Made with GitHub API and Charts.js
+                    </p>
+                    <div id="commitsLoader" width="400" height="250">
+                      <div class="lds-dual-ring align-center"></div>
+                    </div>
                     <canvas id="commitsChart" width="400" height="250"></canvas>
                   </div>
                   <div class="carousel-item">
-                    <h5 class="text-paper">Code Written By Langauge</h5>
-                    <p class="text-paper">
+                    <h5 class="text-paper mb-1">Code Written By Langauge</h5>
+                    <p class="text-paper smaller">
                       Bytes of code hosted on GitHub by language.
                     </p>
-                    <p>Made with GitHub API and Charts.js</p>
+                    <p class="text-paper smaller">
+                      Made with GitHub API and Charts.js
+                    </p>
+                    <div id="languagesLoader" width="400" height="250">
+                      <div class="lds-dual-ring align-center"></div>
+                    </div>
                     <canvas
                       id="languagesChart"
                       width="400"
@@ -149,17 +149,6 @@
                   <span class="sr-only">Next</span>
                 </a>
               </div>
-              <!-- <div>
-                <h5 class="text-paper">Git Commit History</h5>
-                <p class="text-paper">Made with GitHub API and Charts.js</p>
-                <canvas id="commitsChart" width="400" height="250"></canvas>
-              </div>
-              <br />
-              <div>
-                <h5 class="text-paper">Github Code By Langauge</h5>
-                <p class="text-paper">Made with GitHub API and Charts.js</p>
-                <canvas id="languagesChart" width="400" height="250"></canvas>
-              </div> -->
             </div>
           </section>
         </div>

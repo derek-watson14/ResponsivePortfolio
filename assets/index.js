@@ -131,6 +131,7 @@ async function getLanguageStats(repoNames) {
 // * Draw Charts
 async function drawBarChart(repoNames) {
   const { data, labels } = await organizeCommitDates(repoNames);
+  $("#commitsLoader").hide();
   var ctx = document.getElementById("commitsChart");
   var myChart = new Chart(ctx, {
     type: "bar",
@@ -151,6 +152,7 @@ async function drawBarChart(repoNames) {
 
 async function drawPieChart(repoNames) {
   const { data, labels } = await getLanguageStats(repoNames);
+  $("#languagesLoader").hide();
   var ctx = document.getElementById("languagesChart");
   var myChart = new Chart(ctx, {
     type: "doughnut",
@@ -174,9 +176,6 @@ async function drawPieChart(repoNames) {
     options: {
       responsive: true,
       legend: {
-        labels: {
-          padding: 20,
-        },
         position: "left",
       },
     },
