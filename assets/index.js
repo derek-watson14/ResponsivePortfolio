@@ -141,11 +141,34 @@ async function drawBarChart(repoNames) {
         {
           label: "Monthly Commits",
           data,
-          backgroundColor: "rgba(253, 198, 157, 0.2)",
-          borderColor: "#ffe0b7",
+          backgroundColor: "#4b6892",
+          borderColor: "#fefefe",
           borderWidth: 1,
         },
       ],
+    },
+    options: {
+      legend: {
+        labels: {
+          fontColor: "#f5f1e9",
+        },
+      },
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              fontColor: "#f5f1e9",
+            },
+          },
+        ],
+        xAxes: [
+          {
+            ticks: {
+              fontColor: "#f5f1e9",
+            },
+          },
+        ],
+      },
     },
   });
 }
@@ -160,13 +183,14 @@ async function drawPieChart(repoNames) {
       datasets: [
         {
           data,
+          // https://www.sessions.edu/color-calculator-results/?colors=4b6892,fdc69d,adc872,92674b,9db8fd,c872ad
           backgroundColor: [
             "#4b6892",
-            "#ca936a",
-            "#92564b",
-            "#844b92",
-            "#93ae5a",
-            "#1b2127",
+            "#fdc69d",
+            "#c872ad",
+            "#adc872",
+            "#9db8fd",
+            "#92674b",
           ],
           label: "Languages",
         },
@@ -177,6 +201,10 @@ async function drawPieChart(repoNames) {
       responsive: true,
       legend: {
         position: "left",
+        align: "start",
+        labels: {
+          fontColor: "#f5f1e9",
+        },
       },
     },
   });
@@ -184,9 +212,7 @@ async function drawPieChart(repoNames) {
 
 async function displayGithubData() {
   const repoNames = await getRepoNames();
-  console.log("Loadin'");
 
-  // TODO display indicator while loading
   drawPieChart(repoNames);
   drawBarChart(repoNames);
 }
