@@ -92,6 +92,19 @@ async function getRawLanguageStats(repoName) {
   return repoStats;
 }
 
+async function organizeCommitDates(repoNames) {
+  const commitDates = await getAllCommitDates(repoNames);
+  let dateTally = commitDates.sort().reduce((tally, date) => {
+    date = date.split("-");
+    const displayFormat = `${months[date[1] - 1]} '${date[0].slice(2)}`;
+    tally[displayFormat] = (tally[displayFormat] || 0) + 1;
+    return tally;
+  }, createEmptyBins());
+  const data = Object.values(dateTally);
+  const labels = Object.keys(dateTally);
+  return { data, labels };
+}
+
 async function getLanguageStats(repoNames) {
   const statsByRepo = {};
   const statsByLanguage = {};
@@ -116,7 +129,8 @@ async function getLanguageStats(repoNames) {
 }
 
 // * Draw Charts
-function drawBarChart(labels, data) {
+async function drawBarChart(repoNames) {
+  const { data, labels } = await organizeCommitDates(repoNames);
   var ctx = document.getElementById("commitsChart");
   var myChart = new Chart(ctx, {
     type: "bar",
@@ -135,7 +149,8 @@ function drawBarChart(labels, data) {
   });
 }
 
-function drawPieChart(labels, data) {
+async function drawPieChart(repoNames) {
+  const { data, labels } = await getLanguageStats(repoNames);
   var ctx = document.getElementById("languagesChart");
   var myChart = new Chart(ctx, {
     type: "doughnut",
@@ -168,28 +183,13 @@ function drawPieChart(labels, data) {
   });
 }
 
-let stats;
 async function displayGithubData() {
   const repoNames = await getRepoNames();
   console.log("Loadin'");
 
   // TODO display indicator while loading
-
-  const languageStats = await getLanguageStats(repoNames);
-  drawPieChart(languageStats.labels, languageStats.data);
-
-  const commitDates = await getAllCommitDates(repoNames);
-  let tally = commitDates.sort().reduce((tally, date) => {
-    date = date.split("-");
-    const displayFormat = `${months[date[1] - 1]} '${date[0].slice(2)}`;
-    tally[displayFormat] = (tally[displayFormat] || 0) + 1;
-    return tally;
-  }, createEmptyBins());
-
-  let chartLabels = Object.keys(tally);
-  let chartData = Object.values(tally);
-
-  drawBarChart(chartLabels, chartData);
+  drawPieChart(repoNames);
+  drawBarChart(repoNames);
 }
 
 displayGithubData();
