@@ -78,6 +78,7 @@ $("#project-modal").on("show.bs.modal", function (event) {
           src="./project-imgs/${image}.png"
           class="d-block w-100"
           alt="Project screenshot"
+          loading="lazy"
         />
       </div>
     `);
