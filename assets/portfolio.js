@@ -32,6 +32,22 @@ const projects = {
     codebase: "https://github.com/derek-watson14/homepage",
     deployment: "https://derek-watson14.github.io/homepage/",
   },
+  employeeTracker: {
+    title: "Employee Tracker",
+    images: ["et1", "et2", "et3"],
+    desc:
+      "An console based employee tracker which allows a user to manage teams and departments within an organization. Built using Node, SQL and a lot of asyncronous JavaScript.",
+    codebase: "https://github.com/derek-watson14/EmployeeTracker",
+    deployment: "",
+  },
+  flipIt: {
+    title: "Flip It - Flashcard Study App",
+    images: ["fi1", "fi2", "fi3", "fi4"],
+    desc:
+      "FlipIt is a flashcard study aplication I built with a team of three others from my Uw course. It allows users to create an account, create decks of flashcards, search for decks made by other users and study the cards within the decks. Created with Node.js, Express, jQuery, mySQL and Sequelize, among other technologies.",
+    codebase: "https://github.com/AychDubya/Flipit",
+    deployment: "https://flipitstudy.herokuapp.com/study/1",
+  },
 };
 
 const modal = document.querySelector("#project-modal");
@@ -44,8 +60,13 @@ $("#project-modal").on("show.bs.modal", function (event) {
 
   modal.find(".modal-title").text(title);
   modal.find("#modal-description").text(desc);
-  modal.find("#modal-deployment").attr("href", deployment);
   modal.find("#modal-codebase").attr("href", codebase);
+  if (!deployment) {
+    modal.find("#modal-deployment").parent().hide();
+  } else {
+    modal.find("#modal-deployment").parent().show();
+    modal.find("#modal-deployment").attr("href", deployment);
+  }
   const imgContainer = modal.find("#modal-img-container");
 
   imgContainer.empty();
